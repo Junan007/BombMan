@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TleSet.res" type="TileSet" id=1]
+[ext_resource path="res://fonts/cave-story.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Arena" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="SpawnPositions" type="Node2D" parent="."]
+
+[node name="0" type="Position2D" parent="SpawnPositions"]
+
+[node name="1" type="Position2D" parent="SpawnPositions"]
+
+[node name="2" type="Position2D" parent="SpawnPositions"]
+
+[node name="3" type="Position2D" parent="SpawnPositions"]
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="ScoresBoard" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 344.0
+margin_right = 480.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 1 )
+text = "Score: 100000
+- Player1: 11212"
